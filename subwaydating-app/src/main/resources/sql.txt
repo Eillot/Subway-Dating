@@ -1,0 +1,29 @@
+INSERT INTO vl_user(id,login_account,login_password,create_time) VALUES (100,"zq","zq",NULL);
+UPDATE vl_user SET  id=100,login_account="zq",login_password="zq",create_time=NULL ;
+
+
+-- auto-generated definition
+CREATE TABLE vl_user
+(
+  id             BIGINT AUTO_INCREMENT
+    PRIMARY KEY,
+  user_account   VARCHAR(50)  NOT NULL,
+  user_password  VARCHAR(50)  NOT NULL,
+  create_time    TIMESTAMP    NULL,
+  user_emails    VARCHAR(50)  NULL,
+  user_followers MEDIUMTEXT   NULL,
+  user_stars     MEDIUMTEXT   NULL,
+  user_roles     VARCHAR(50)  NULL,
+  user_token     VARCHAR(500) NULL
+)
+  ENGINE = InnoDB;
+
+
+--create tables vl_images
+CREATE TABLE vl_images
+(
+    id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    image_name VARCHAR(50) NOT NULL,
+    image_path VARCHAR(500) NOT NULL,
+    create_time TIMESTAMP
+);
