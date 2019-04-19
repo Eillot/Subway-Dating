@@ -74,17 +74,17 @@ Setting PATH for MySql 8.0.15
 命令行执行:
 #mysql -u root -p #使用root权限登陆mysql
 
-#create user 'diting'@'localhost' identified by 'diting'; #使用root创建mysql用户diting密码为diting
+#create user 'subwaydating'@'localhost' identified by 'subwaydating'; #使用root创建mysql用户subwaydating密码为subwaydating
 
-#CREATE     DATABASE    diting; #创建数据库diting
+#CREATE     DATABASE    subwaydating; #创建数据库subwaydating
 
-#show    databases; #查看root创建的数据库中包含diting
+#show    databases; #查看root创建的数据库中包含subwaydating
 
-#grant all privileges on diting.* to 'diting'@'localhost'; #root授权给用户diting对数据库diting操作的所有权限
+#grant all privileges on subwaydating.* to 'subwaydating'@'localhost'; #root授权给用户subwaydating对数据库subwaydating操作的所有权限
 
 #quit #退出root权限
 
-#mysql -u diting -p #使用用户diting登陆mysql
+#mysql -u subwaydating -p #使用用户subwaydating登陆mysql
 
 #执行建表语句:
 
@@ -118,7 +118,7 @@ Setting PATH for MySql 8.0.15
 
 1.mysql对大小写敏感，输入SQL语句时注意大小写;
 
-2.在为数据库谛听创建table时，注意一定记得切换为用户diting来创建，否则需要root授权.
+2.在为数据库谛听创建table时，注意一定记得切换为用户subwaydating来创建，否则需要root授权.
 
 3.在命令行执行建表语句时，SQL语句可能因为语法问题而无法执行,推荐使用IDEA来建表,很简单这里不在赘述.
 
@@ -156,7 +156,7 @@ Redis篇
 
 2.下载代码到本地，使用IDEA导入
 
-3.待依赖加载完毕后，右击diting-web模块的DitingWebApplication.java，来启动使用postman 创建post/get请求即可
+3.待依赖加载完毕后，右击subwaydating-web模块的subwaydatingWebApplication.java，来启动使用postman 创建post/get请求即可
 
 用户注册接口---案例:
 
