@@ -223,7 +223,7 @@ URL为：http://127.0.0.1:8080/api/v1/user/register
         "msg": "register success",
         "data": 
         {
-                        "appToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6cTMiLCJyb2xlcyI6Ik1FTUJFUiIsImV4cCI6MTU1MTA4MTMyOCwiaWF0IjoxNTUwNDc2NTI4fQ.-eCz5BzdEqR4z8sfLRoq6NzZsqun8In8if4ZIvgl85U6dKnzQxjxJBxzNfzjMy2jubQEqlL5Dv-ddI_l_d-JHw",
+                     "appToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6cTMiLCJyb2xlcyI6Ik1FTUJFUiIsImV4cCI6MTU1MTA4MTMyOCwiaWF0IjoxNTUwNDc2NTI4fQ.-eCz5BzdEqR4z8sfLRoq6NzZsqun8In8if4ZIvgl85U6dKnzQxjxJBxzNfzjMy2jubQEqlL5Dv-ddI_l_d-JHw",
             
             "appKey": "api token"
         }
