@@ -3,13 +3,13 @@
 项目介绍
 基于Restful风格的server端Subway Dating
 
-软件架构
-框架主体：
+# 软件架构
 
+框架主体：
 
 Spring Boot（即Spring + SpringMVC + MyBatis）
 
-项目设计结构：
+# 项目设计结构：
 
 1.DAO层用于封装数据库操作，包括查询，修改，删除，数据同步等.
 
@@ -30,7 +30,7 @@ Spring Boot（即Spring + SpringMVC + MyBatis）
 4. 定时同步mysql的数据到redis ,若redis数据失效，则主动向mysql发起数据同步.
 5. 用户权限管理
 
-安装教程
+# 安装教程
 本地下载并安装JDK 1.8 ,redis-3.2.5,IDEA 2018与 MySQL 8.0
 clone代码到本地,执行SQL创建本地数据库表字段.
 使用Maven启动项目并开始构建.
