@@ -22,7 +22,7 @@ Spring Boot（即Spring + SpringMVC + MyBatis）
 5.WEB层用于封装资源展示逻辑控制方法，使前端数据展示更加美观得体.
 
 
-#### Server端已实现部分功能说明
+#### Server端实现部分功能说明
 
 1. 基于Jwt token认证机制，实现用户操作模块，主要有：用户登录，注册，认证等主要功能.
 2. 基于mysql实现用户信息查询，修改，保存与读取图片（使用保存图片路径的方式）.
@@ -172,16 +172,18 @@ URL为：http://127.0.0.1:8080/api/v1/user/register
                }
 用户注册接口返回json数据为:
 
-{
-    "status": "200",
-    "code": "200",
-    "msg": "register success",
-    "data": 
+
     {
-        "appToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6cTMiLCJyb2xlcyI6Ik1FTUJFUiIsImV4cCI6MTU1MTA4MTMyOCwiaWF0IjoxNTUwNDc2NTI4fQ.-eCz5BzdEqR4z8sfLRoq6NzZsqun8In8if4ZIvgl85U6dKnzQxjxJBxzNfzjMy2jubQEqlL5Dv-ddI_l_d-JHw",
-        "appKey": "api token"
+        "status": "200",
+        "code": "200",
+        "msg": "register success",
+        "data": 
+        {
+            "appToken":        "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6cTMiLCJyb2xlcyI6Ik1FTUJFUiIsImV4cCI6MTU1MTA4MTMyOCwiaWF0IjoxNTUwNDc2NTI4fQ.-eCz5BzdEqR4z8sfLRoq6NzZsqun8In8if4ZIvgl85U6dKnzQxjxJBxzNfzjMy2jubQEqlL5Dv-ddI_l_d-JHw",
+            
+            "appKey": "api token"
+        }
     }
-}
 
 # F&Q&A
 
