@@ -114,7 +114,7 @@ Setting PATH for MySql 8.0.15
    );
 #Mysql命令行所有命令执行完毕
 
-F&Q&A
+# F&Q&A
 
 1.mysql对大小写敏感，输入SQL语句时注意大小写;
 
@@ -150,7 +150,7 @@ Redis篇
 
 #至此项目执行环境搭建完毕
 
-二. 项目执行
+# 二. 项目执行
 
 1.下载并安装IDEA
 
@@ -182,7 +182,8 @@ URL为：http://127.0.0.1:8080/api/v1/user/register
         "appKey": "api token"
     }
 }
-F&Q&A
+
+# F&Q&A
 
 1.记得设置下mac 版postman默认的请求响应时间在postman--->Preferences--->Request timeoput in ms(0 for infinity)的默认值,避免postman过早判断接口响应超时,推荐3600ms
 
