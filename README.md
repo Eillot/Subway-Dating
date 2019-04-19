@@ -72,35 +72,43 @@ Setting PATH for MySql 8.0.15
 配置完毕后，保存并退出.
 
 命令行执行:
-#mysql -u root -p #使用root权限登陆mysql
 
-#create user 'subwaydating'@'localhost' identified by 'subwaydating'; #使用root创建mysql用户subwaydating密码为subwaydating
+### mysql -u root -p #使用root权限登陆mysql
 
-#CREATE     DATABASE    subwaydating; #创建数据库subwaydating
+### create user 'subwaydating'@'localhost' identified by 'subwaydating'; #使用root创建mysql用户subwaydating密码为subwaydating
 
-#show    databases; #查看root创建的数据库中包含subwaydating
+####CREATE     DATABASE    subwaydating; #创建数据库subwaydating
 
-#grant all privileges on subwaydating.* to 'subwaydating'@'localhost'; #root授权给用户subwaydating对数据库subwaydating操作的所有权限
+### show    databases; #查看root创建的数据库中包含subwaydating
 
-#quit #退出root权限
+### grant all privileges on subwaydating.* to 'subwaydating'@'localhost'; #root授权给用户subwaydating对数据库subwaydating操作的所有权限
 
-#mysql -u subwaydating -p #使用用户subwaydating登陆mysql
+### quit #退出root权限
 
-#执行建表语句:
+### mysql -u subwaydating -p #使用用户subwaydating登陆mysql
 
+### 执行建表语句:
+   
+   
+   
    create table dt_image
    (
+     
      id          bigint auto_increment
        primary key,
+       
      image_name  varchar(200) null,
+     
      image_path  varchar(500) null,
      create_time timestamp    null,
      constraint dt_image_image_name_uindex
        unique (image_name)
    );
 
+
    create table dt_user
    (
+   
      id            bigint auto_increment
        primary key,
      user_account  varchar(50)  not null,
@@ -112,65 +120,67 @@ Setting PATH for MySql 8.0.15
      constraint dt_user_user_account_uindex
        unique (user_account)
    );
+   
 #Mysql命令行所有命令执行完毕
 
 # F&Q&A
 
-1.mysql对大小写敏感，输入SQL语句时注意大小写;
+### 1.mysql对大小写敏感，输入SQL语句时注意大小写;
 
-2.在为数据库谛听创建table时，注意一定记得切换为用户subwaydating来创建，否则需要root授权.
+### 2.在为数据库谛听创建table时，注意一定记得切换为用户subwaydating来创建，否则需要root授权.
 
-3.在命令行执行建表语句时，SQL语句可能因为语法问题而无法执行,推荐使用IDEA来建表,很简单这里不在赘述.
+### 3.在命令行执行建表语句时，SQL语句可能因为语法问题而无法执行,推荐使用IDEA来建表,很简单这里不在赘述.
 
-Java篇
+## Java篇
 
-1.下载并安装java jdk 1.8.0_191及以上版本
+### 1.下载并安装java jdk 1.8.0_191及以上版本
 
-2.配置JDK环境变量与JRE执行环境,很简单这里不在赘述.
+### 2.配置JDK环境变量与JRE执行环境,很简单这里不在赘述.
 
-Redis篇
+### Redis篇
 
-1.下载并安装Redis-3.2.5 Redis-3.2.5下载地址
+### 1.下载并安装Redis-3.2.5 Redis-3.2.5下载地址
 
-2.安装完毕后，命令行执行
+## 2.安装完毕后，命令行执行
 
-#cd /usr/local/redis-3.2.5/
+### cd /usr/local/redis-3.2.5/
 
-#open -p redis.conf
+### open -p redis.conf
 
-#将redis.conf文件中的"#requirepass foobared"去掉注释，foobared替换为123456，保存并退出. #继续执行如下命令:
+### 将redis.conf文件中的"#requirepass foobared"去掉注释，foobared替换为123456，保存并退出. #继续执行如下命令:
 
-#cd /usr/local/redis-3.2.5/src/
+### cd /usr/local/redis-3.2.5/src/
 
-#./redis-server    #启动redis服务
+### ./redis-server    #启动redis服务
 
-#./redis-cli    #另开命令行窗口在同一目录下启动client端
+### ./redis-cli    #另开命令行窗口在同一目录下启动client端
 
-#auth 123456    #执行redis认证,返回OK表示redis密码设置成功
+### auth 123456    #执行redis认证,返回OK表示redis密码设置成功
 
-#至此项目执行环境搭建完毕
+### 至此项目执行环境搭建完毕
 
 # 二. 项目执行
 
-1.下载并安装IDEA
 
-2.下载代码到本地，使用IDEA导入
+### 1.下载并安装IDEA
 
-3.待依赖加载完毕后，右击subwaydating-web模块的subwaydatingWebApplication.java，来启动使用postman 创建post/get请求即可
+### 2.下载代码到本地，使用IDEA导入
 
-用户注册接口---案例:
+### 3.待依赖加载完毕后，右击subwaydating-web模块的subwaydatingWebApplication.java，来启动使用postman 创建post/get请求即可
 
-1.使用postman创建post请求:
+## 用户注册接口---案例:
 
-URL为：http://127.0.0.1:8080/api/v1/user/register
+### 1.使用postman创建post请求:
 
-求的json数据为:
+### URL为：http://127.0.0.1:8080/api/v1/user/register
+
+### 求的json数据为:
 
                {
                 "userLoginAccount": "zq3",
                 "userLoginPassword": "134242"
                }
-用户注册接口返回json数据为:
+### 用户注册接口返回json数据为:
 
 
     {
@@ -179,7 +189,7 @@ URL为：http://127.0.0.1:8080/api/v1/user/register
         "msg": "register success",
         "data": 
         {
-            "appToken":        "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6cTMiLCJyb2xlcyI6Ik1FTUJFUiIsImV4cCI6MTU1MTA4MTMyOCwiaWF0IjoxNTUwNDc2NTI4fQ.-eCz5BzdEqR4z8sfLRoq6NzZsqun8In8if4ZIvgl85U6dKnzQxjxJBxzNfzjMy2jubQEqlL5Dv-ddI_l_d-JHw",
+                        "appToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6cTMiLCJyb2xlcyI6Ik1FTUJFUiIsImV4cCI6MTU1MTA4MTMyOCwiaWF0IjoxNTUwNDc2NTI4fQ.-eCz5BzdEqR4z8sfLRoq6NzZsqun8In8if4ZIvgl85U6dKnzQxjxJBxzNfzjMy2jubQEqlL5Dv-ddI_l_d-JHw",
             
             "appKey": "api token"
         }
@@ -187,7 +197,7 @@ URL为：http://127.0.0.1:8080/api/v1/user/register
 
 # F&Q&A
 
-1.记得设置下mac 版postman默认的请求响应时间在postman--->Preferences--->Request timeoput in ms(0 for infinity)的默认值,避免postman过早判断接口响应超时,推荐3600ms
+### 1.记得设置下mac 版postman默认的请求响应时间在postman--->Preferences--->Request timeoput in ms(0 for infinity)的默认值,避免postman过早判断接口响应超时,推荐3600ms
 
 
 参与贡献
@@ -198,12 +208,17 @@ Fork 本项目
 Wiki编辑说明风格约定为Markdown风格
 
 ####
+
 开源协议： Apache License-2.0
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
  http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+ 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+the specific language governing permissions and limitations under the License.
 
-请勿用商业用途，侵权必究.
+# 请勿用商业用途，侵权必究.
 ####
