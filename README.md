@@ -98,7 +98,7 @@ mysql -u subwaydating -p #使用用户subwaydating登陆mysql
    
    
    
-   create table dt_image
+   create table subwaydating_image
    (
      
      id          bigint auto_increment
@@ -113,7 +113,7 @@ mysql -u subwaydating -p #使用用户subwaydating登陆mysql
    );
 
 
-   create table dt_user
+   create table subwaydating_user
    (
    
      id            bigint auto_increment
@@ -136,7 +136,7 @@ mysql -u subwaydating -p #使用用户subwaydating登陆mysql
 1.mysql对大小写敏感，输入SQL语句时注意大小写;
 
 
-2.在为数据库谛听创建table时，注意一定记得切换为用户subwaydating来创建，否则需要root授权.
+2.在为数据库subwaydating创建table时，注意一定记得切换为用户subwaydating来创建，否则需要root授权.
 
 
 3.在命令行执行建表语句时，SQL语句可能因为语法问题而无法执行,推荐使用IDEA来建表,很简单这里不在赘述.
